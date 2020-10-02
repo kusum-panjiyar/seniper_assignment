@@ -23,7 +23,7 @@ class UForm extends React.Component(){
             email: this.state.email,
             phone: this.state.phone,
             name: this.state.name,
-            gender: this.state.gender,
+            rating: this.state.rating,
             
         }
 
@@ -41,8 +41,8 @@ class UForm extends React.Component(){
         })
     }
 
-     handleRadioChange=(gender)=>{
-        this.setState({gender})
+     handleRadioChange=(rating)=>{
+        this.setState({rating})
     }
 
     render(){
