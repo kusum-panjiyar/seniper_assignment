@@ -27,7 +27,7 @@ function DashBoard(){
                                     <td>{ele.text}</td>
                                     <td>{ele.phone}</td>
                                     <td>{ele.email}</td>
-                                    <td>{ele.gender}</td>
+                                    <td>{ele.rating}</td>
                                     <td>{ele.name}</td>
                                 </tr>
                             )
