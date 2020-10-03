@@ -1,9 +1,9 @@
 import React from "react"
 import {Container, Form, Col, Row, Button} from 'react-bootstrap'
 
-class Uform extends React.Component(){
-        constructor(){
-            super()
+class Uform extends React.Component{
+        constructor(props){
+            super(props)
             this.state = {
                 formName: 'Aromatic bar',
                 text: '',
@@ -28,12 +28,15 @@ class Uform extends React.Component(){
         }
 
         //this.setState({arr: this.state.arr.push('arr')})
+        var arr = []
+        arr.push(formData)
+        arr=  arr.concat(JSON.parse(localStorage.getItem('arr') || "[]"))
+
+        const setItem = localStorage.setItem('arr',JSON.stringify(arr))
+        if(arr){
+            alert("Good job!");
+        }
         
-        console.log(formData)
-          JSON.parse(localStorage.getItem('arr'))
-          arr.push(formData)
-        
-        localStorage.setItem('arr',JSON.stringify(arr))
     }
 
      handleChange = (e) => {
@@ -100,23 +103,11 @@ class Uform extends React.Component(){
                                     pattern="[0-9]{10}"
                                 />
                             </Col>
-                            <Col md={6}>
-                            <Form.Label htmlFor="name">Name:-</Form.Label>
-                            <Form.Control 
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={this.state.name}
-                                onChange={this.handleChange}
-                                required
-                            />
-                            </Col>
-                        </Row>
 
-                         <Row>
-                            <Col>
+                            <Col md={6}>
                             <Form.Label>Rating:- </Form.Label>
-                                <Form.Check inline label='Excellent' type="radio" id="excellent" name="rating"
+                            <Row>
+                            <Form.Check inline label='Excellent' type="radio" id="excellent" name="rating"
                                     checked={this.state.rating ==='excellent'}
                                     onChange={()=>{this.handleRadioChange('excellent')}}
                                 />
@@ -132,7 +123,25 @@ class Uform extends React.Component(){
                                     checked={this.state.rating==='bad'}
                                     onChange={()=>{this.handleRadioChange('bad')}}
                                 />
+                            </Row>
+                               
                             </Col>                       
+
+                            
+                        </Row>
+
+                         <Row>
+                         <Col md={6}>
+                            <Form.Label htmlFor="name">Name:-</Form.Label>
+                            <Form.Control 
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={this.state.name}
+                                onChange={this.handleChange}
+                                required
+                            />
+                            </Col>
                         </Row>
     
                         <Row>
