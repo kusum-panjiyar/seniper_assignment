@@ -5,7 +5,7 @@ class Uform extends React.Component{
         constructor(props){
             super(props)
             this.state = {
-                formName: 'Aromatic bar',
+                //formName: 'Aromatic bar',
                 text: '',
                 email: '',
                 phone: '',
@@ -18,7 +18,7 @@ class Uform extends React.Component{
      handleSubmit = (e) => {
         e.preventDefault()
         const formData = {
-            formName: this.state.formName,
+            //formName: this.state.formName,
             text: this.state.text,
             email: this.state.email,
             phone: this.state.phone,
@@ -56,9 +56,7 @@ class Uform extends React.Component{
                     <Form onSubmit={this.handleSubmit}>
                         <Row>
                             <Col>
-                            <input className="ml-0 border-0 text-left text-info mt-3" style={{outline: "none"}}
-                                    value={this.state.formName}
-                                />
+                            <h4 className="ml-0 border-0 text-left text-info mt-3" style={{outline: "none"}}> Aromatic bar</h4>
                                 <p>we are committed to providing you with the best dining experience possible,
                                     so we welcome your comments. please fill out these questionnarie Thank you
                                 </p>
