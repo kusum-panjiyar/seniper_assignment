@@ -119,7 +119,7 @@ class Uform extends React.Component{
                                 />
                                 <Form.Check inline label='Bad' type="radio" id="bad" name="rating"
                                     checked={this.state.rating==='bad'}
-                                    onChange={()=>{this.handleRadioChange('bad')}}
+                                    onChange={()=>{this.handleRadioChange('bad')}} required
                                 />
                             </Row>
                                
