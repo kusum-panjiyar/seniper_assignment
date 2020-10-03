@@ -145,7 +145,7 @@ class Uform extends React.Component{
                         <Row>
                             <Col md={4}></Col>
                             <Col md={4}>
-                        <Button  size="sm" block  className="mt-3 pl-5 pr-5">
+                        <Button  size="sm" block  className="mt-3 pl-5 pr-5 btn btn-success">
                             <input type="submit" className="btn" value="SUBMIT"/></Button>
                             </Col>
                             <col md={4}></col>
