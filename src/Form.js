@@ -77,7 +77,7 @@ class Uform extends React.Component{
                                 />
                             </Col>
                             <Col md={6}>
-                            <Form.Label htmlFor="email">Email:-</Form.Label>
+                            <Form.Label htmlFor="email">Email Field</Form.Label>
                             <Form.Control 
                                 type="text"
                                 id="email"
@@ -92,7 +92,7 @@ class Uform extends React.Component{
                        
                         <Row className="pt-3">
                             <Col md={6}>
-                                <Form.Label htmlFor="phone">Phone:-</Form.Label>
+                                <Form.Label htmlFor="phone">Phone Field</Form.Label>
                                 <Form.Control 
                                     type="Number"
                                     id="phone"
@@ -105,7 +105,7 @@ class Uform extends React.Component{
                             </Col>
 
                             <Col md={6}>
-                            <Form.Label>Rating:- </Form.Label>
+                            <Form.Label>Radio Button:- </Form.Label>
                             <Row>
                             <Form.Check inline label='Excellent' type="radio" id="excellent" name="rating"
                                     checked={this.state.rating ==='excellent'}
@@ -132,7 +132,7 @@ class Uform extends React.Component{
 
                          <Row>
                          <Col md={6}>
-                            <Form.Label htmlFor="name">Name:-</Form.Label>
+                            <Form.Label htmlFor="name">Name *</Form.Label>
                             <Form.Control 
                                 type="text"
                                 id="name"
