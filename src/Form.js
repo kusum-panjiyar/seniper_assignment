@@ -27,7 +27,7 @@ class Uform extends React.Component{
             
         }
 
-        //this.setState({arr: this.state.arr.push('arr')})
+    
         var arr = []
         arr.push(formData)
         arr=  arr.concat(JSON.parse(localStorage.getItem('arr') || "[]"))
