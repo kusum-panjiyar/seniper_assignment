@@ -1,9 +1,9 @@
 import React from "react"
 import {Container, Form, Col, Row, Button} from 'react-bootstrap'
 
-class UForm extends React.Component(){
-        constructor(props){
-            super(props)
+class Uform extends React.Component(){
+        constructor(){
+            super()
             this.state = {
                 formName: 'Aromatic bar',
                 text: '',
@@ -27,10 +27,11 @@ class UForm extends React.Component(){
             
         }
 
-        //const arr=[]
+        //this.setState({arr: this.state.arr.push('arr')})
+        
         console.log(formData)
-         JSON.parse(localStorage.getItem('arr'))
-         arr.push(formData)
+          JSON.parse(localStorage.getItem('arr'))
+          arr.push(formData)
         
         localStorage.setItem('arr',JSON.stringify(arr))
     }
@@ -150,4 +151,4 @@ class UForm extends React.Component(){
     
 }
 
-export default UForm
+export default Uform
